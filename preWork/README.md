@@ -26,7 +26,7 @@ The following **additional** features are implemented:
 ### Demo Visualizatio
 
 
-<img src='./demo.gif' title='Demo Visualization' width='' alt='Demo Visualization'' />
+![Demo Visualization](https://github.com/liecn/ios_course/blob/master/preWork/demo.gif)
 
 
 ### Comments
