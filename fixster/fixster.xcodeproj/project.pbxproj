@@ -1,0 +1,763 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		28BC97EC66EF220F186B1B76 /* Pods_fixsterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A64ED9FAEBFC565161B6467 /* Pods_fixsterTests.framework */; };
+		4B97BD9546B215594107EB53 /* Pods_fixster_fixsterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F67241BB31F0FB75C7945B33 /* Pods_fixster_fixsterUITests.framework */; };
+		CD7D7EE5251D312D0029F9EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7D7EE4251D312D0029F9EB /* AppDelegate.swift */; };
+		CD7D7EE7251D312D0029F9EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7D7EE6251D312D0029F9EB /* SceneDelegate.swift */; };
+		CD7D7EEC251D312D0029F9EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD7D7EEA251D312D0029F9EB /* Main.storyboard */; };
+		CD7D7EEE251D31310029F9EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD7D7EED251D31310029F9EB /* Assets.xcassets */; };
+		CD7D7EF1251D31310029F9EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD7D7EEF251D31310029F9EB /* LaunchScreen.storyboard */; };
+		CD7D7EFC251D31310029F9EB /* fixsterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7D7EFB251D31310029F9EB /* fixsterTests.swift */; };
+		CD7D7F07251D31310029F9EB /* fixsterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7D7F06251D31310029F9EB /* fixsterUITests.swift */; };
+		CD7D7F17251D32FA0029F9EB /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7D7F16251D32FA0029F9EB /* MoviesViewController.swift */; };
+		CD7D7F19251D3D1E0029F9EB /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7D7F18251D3D1E0029F9EB /* MovieCell.swift */; };
+		CD7D7F1D251D6BB90029F9EB /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7D7F1C251D6BB90029F9EB /* MovieDetailsViewController.swift */; };
+		CD7D7F1F251D758C0029F9EB /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7D7F1E251D758C0029F9EB /* GridViewController.swift */; };
+		CD7D7F21251D7C340029F9EB /* GridViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7D7F20251D7C340029F9EB /* GridViewCell.swift */; };
+		CD7D7F23251D9B3F0029F9EB /* TrailerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7D7F22251D9B3F0029F9EB /* TrailerViewController.swift */; };
+		D427FF69DF4ABC79DA5D66DF /* Pods_fixster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EABA585AFFEC661070BC4A9 /* Pods_fixster.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD7D7EF8251D31310029F9EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD7D7ED9251D312D0029F9EB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD7D7EE0251D312D0029F9EB;
+			remoteInfo = fixster;
+		};
+		CD7D7F03251D31310029F9EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD7D7ED9251D312D0029F9EB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD7D7EE0251D312D0029F9EB;
+			remoteInfo = fixster;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2864B97452E6603D27D1ECA3 /* Pods-fixster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fixster.release.xcconfig"; path = "Target Support Files/Pods-fixster/Pods-fixster.release.xcconfig"; sourceTree = "<group>"; };
+		2A64ED9FAEBFC565161B6467 /* Pods_fixsterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fixsterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34E8591E59A37965E9C7B3D0 /* Pods-fixster-fixsterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fixster-fixsterUITests.debug.xcconfig"; path = "Target Support Files/Pods-fixster-fixsterUITests/Pods-fixster-fixsterUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		60D70264E4042FA8E6217ECA /* Pods-fixster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fixster.debug.xcconfig"; path = "Target Support Files/Pods-fixster/Pods-fixster.debug.xcconfig"; sourceTree = "<group>"; };
+		82503EC40DDB88D50EE4CD19 /* Pods-fixster-fixsterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fixster-fixsterUITests.release.xcconfig"; path = "Target Support Files/Pods-fixster-fixsterUITests/Pods-fixster-fixsterUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8EABA585AFFEC661070BC4A9 /* Pods_fixster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fixster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD7D7EE1251D312D0029F9EB /* fixster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fixster.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD7D7EE4251D312D0029F9EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CD7D7EE6251D312D0029F9EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CD7D7EEB251D312D0029F9EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CD7D7EED251D31310029F9EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD7D7EF0251D31310029F9EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CD7D7EF2251D31310029F9EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD7D7EF7251D31310029F9EB /* fixsterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fixsterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD7D7EFB251D31310029F9EB /* fixsterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fixsterTests.swift; sourceTree = "<group>"; };
+		CD7D7EFD251D31310029F9EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD7D7F02251D31310029F9EB /* fixsterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fixsterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD7D7F06251D31310029F9EB /* fixsterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fixsterUITests.swift; sourceTree = "<group>"; };
+		CD7D7F08251D31310029F9EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD7D7F16251D32FA0029F9EB /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
+		CD7D7F18251D3D1E0029F9EB /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		CD7D7F1C251D6BB90029F9EB /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
+		CD7D7F1E251D758C0029F9EB /* GridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
+		CD7D7F20251D7C340029F9EB /* GridViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewCell.swift; sourceTree = "<group>"; };
+		CD7D7F22251D9B3F0029F9EB /* TrailerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerViewController.swift; sourceTree = "<group>"; };
+		E140A4D09134F314E141B017 /* Pods-fixsterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fixsterTests.debug.xcconfig"; path = "Target Support Files/Pods-fixsterTests/Pods-fixsterTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E35CADA0019366DB5DFD3E4A /* Pods-fixsterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fixsterTests.release.xcconfig"; path = "Target Support Files/Pods-fixsterTests/Pods-fixsterTests.release.xcconfig"; sourceTree = "<group>"; };
+		F67241BB31F0FB75C7945B33 /* Pods_fixster_fixsterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fixster_fixsterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD7D7EDE251D312D0029F9EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D427FF69DF4ABC79DA5D66DF /* Pods_fixster.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD7D7EF4251D31310029F9EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28BC97EC66EF220F186B1B76 /* Pods_fixsterTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD7D7EFF251D31310029F9EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B97BD9546B215594107EB53 /* Pods_fixster_fixsterUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		769E36BDA716E715FB167A8F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8EABA585AFFEC661070BC4A9 /* Pods_fixster.framework */,
+				F67241BB31F0FB75C7945B33 /* Pods_fixster_fixsterUITests.framework */,
+				2A64ED9FAEBFC565161B6467 /* Pods_fixsterTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD7D7ED8251D312D0029F9EB = {
+			isa = PBXGroup;
+			children = (
+				CD7D7EE3251D312D0029F9EB /* fixster */,
+				CD7D7EFA251D31310029F9EB /* fixsterTests */,
+				CD7D7F05251D31310029F9EB /* fixsterUITests */,
+				CD7D7EE2251D312D0029F9EB /* Products */,
+				CDB2AE9E32CBA5979D6EEC19 /* Pods */,
+				769E36BDA716E715FB167A8F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CD7D7EE2251D312D0029F9EB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD7D7EE1251D312D0029F9EB /* fixster.app */,
+				CD7D7EF7251D31310029F9EB /* fixsterTests.xctest */,
+				CD7D7F02251D31310029F9EB /* fixsterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD7D7EE3251D312D0029F9EB /* fixster */ = {
+			isa = PBXGroup;
+			children = (
+				CD7D7EE4251D312D0029F9EB /* AppDelegate.swift */,
+				CD7D7EE6251D312D0029F9EB /* SceneDelegate.swift */,
+				CD7D7EEA251D312D0029F9EB /* Main.storyboard */,
+				CD7D7EED251D31310029F9EB /* Assets.xcassets */,
+				CD7D7EEF251D31310029F9EB /* LaunchScreen.storyboard */,
+				CD7D7EF2251D31310029F9EB /* Info.plist */,
+				CD7D7F16251D32FA0029F9EB /* MoviesViewController.swift */,
+				CD7D7F18251D3D1E0029F9EB /* MovieCell.swift */,
+				CD7D7F1C251D6BB90029F9EB /* MovieDetailsViewController.swift */,
+				CD7D7F1E251D758C0029F9EB /* GridViewController.swift */,
+				CD7D7F20251D7C340029F9EB /* GridViewCell.swift */,
+				CD7D7F22251D9B3F0029F9EB /* TrailerViewController.swift */,
+			);
+			path = fixster;
+			sourceTree = "<group>";
+		};
+		CD7D7EFA251D31310029F9EB /* fixsterTests */ = {
+			isa = PBXGroup;
+			children = (
+				CD7D7EFB251D31310029F9EB /* fixsterTests.swift */,
+				CD7D7EFD251D31310029F9EB /* Info.plist */,
+			);
+			path = fixsterTests;
+			sourceTree = "<group>";
+		};
+		CD7D7F05251D31310029F9EB /* fixsterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CD7D7F06251D31310029F9EB /* fixsterUITests.swift */,
+				CD7D7F08251D31310029F9EB /* Info.plist */,
+			);
+			path = fixsterUITests;
+			sourceTree = "<group>";
+		};
+		CDB2AE9E32CBA5979D6EEC19 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				60D70264E4042FA8E6217ECA /* Pods-fixster.debug.xcconfig */,
+				2864B97452E6603D27D1ECA3 /* Pods-fixster.release.xcconfig */,
+				34E8591E59A37965E9C7B3D0 /* Pods-fixster-fixsterUITests.debug.xcconfig */,
+				82503EC40DDB88D50EE4CD19 /* Pods-fixster-fixsterUITests.release.xcconfig */,
+				E140A4D09134F314E141B017 /* Pods-fixsterTests.debug.xcconfig */,
+				E35CADA0019366DB5DFD3E4A /* Pods-fixsterTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD7D7EE0251D312D0029F9EB /* fixster */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD7D7F0B251D31320029F9EB /* Build configuration list for PBXNativeTarget "fixster" */;
+			buildPhases = (
+				86C8209860B6D8626F28F59A /* [CP] Check Pods Manifest.lock */,
+				CD7D7EDD251D312D0029F9EB /* Sources */,
+				CD7D7EDE251D312D0029F9EB /* Frameworks */,
+				CD7D7EDF251D312D0029F9EB /* Resources */,
+				ECEC0EDD62CC311B10C2F5FB /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = fixster;
+			productName = fixster;
+			productReference = CD7D7EE1251D312D0029F9EB /* fixster.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CD7D7EF6251D31310029F9EB /* fixsterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD7D7F0E251D31320029F9EB /* Build configuration list for PBXNativeTarget "fixsterTests" */;
+			buildPhases = (
+				9267F0DDE3719052E15AAF63 /* [CP] Check Pods Manifest.lock */,
+				CD7D7EF3251D31310029F9EB /* Sources */,
+				CD7D7EF4251D31310029F9EB /* Frameworks */,
+				CD7D7EF5251D31310029F9EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD7D7EF9251D31310029F9EB /* PBXTargetDependency */,
+			);
+			name = fixsterTests;
+			productName = fixsterTests;
+			productReference = CD7D7EF7251D31310029F9EB /* fixsterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CD7D7F01251D31310029F9EB /* fixsterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD7D7F11251D31320029F9EB /* Build configuration list for PBXNativeTarget "fixsterUITests" */;
+			buildPhases = (
+				58AF82301253AF206218BF61 /* [CP] Check Pods Manifest.lock */,
+				CD7D7EFE251D31310029F9EB /* Sources */,
+				CD7D7EFF251D31310029F9EB /* Frameworks */,
+				CD7D7F00251D31310029F9EB /* Resources */,
+				96B6003E3FC395BD5E387BBE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD7D7F04251D31310029F9EB /* PBXTargetDependency */,
+			);
+			name = fixsterUITests;
+			productName = fixsterUITests;
+			productReference = CD7D7F02251D31310029F9EB /* fixsterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD7D7ED9251D312D0029F9EB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "Chenning Li";
+				TargetAttributes = {
+					CD7D7EE0251D312D0029F9EB = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					CD7D7EF6251D31310029F9EB = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = CD7D7EE0251D312D0029F9EB;
+					};
+					CD7D7F01251D31310029F9EB = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = CD7D7EE0251D312D0029F9EB;
+					};
+				};
+			};
+			buildConfigurationList = CD7D7EDC251D312D0029F9EB /* Build configuration list for PBXProject "fixster" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CD7D7ED8251D312D0029F9EB;
+			productRefGroup = CD7D7EE2251D312D0029F9EB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD7D7EE0251D312D0029F9EB /* fixster */,
+				CD7D7EF6251D31310029F9EB /* fixsterTests */,
+				CD7D7F01251D31310029F9EB /* fixsterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD7D7EDF251D312D0029F9EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD7D7EF1251D31310029F9EB /* LaunchScreen.storyboard in Resources */,
+				CD7D7EEE251D31310029F9EB /* Assets.xcassets in Resources */,
+				CD7D7EEC251D312D0029F9EB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD7D7EF5251D31310029F9EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD7D7F00251D31310029F9EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		58AF82301253AF206218BF61 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-fixster-fixsterUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86C8209860B6D8626F28F59A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-fixster-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9267F0DDE3719052E15AAF63 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-fixsterTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96B6003E3FC395BD5E387BBE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-fixster-fixsterUITests/Pods-fixster-fixsterUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-fixster-fixsterUITests/Pods-fixster-fixsterUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-fixster-fixsterUITests/Pods-fixster-fixsterUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECEC0EDD62CC311B10C2F5FB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-fixster/Pods-fixster-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-fixster/Pods-fixster-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-fixster/Pods-fixster-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD7D7EDD251D312D0029F9EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD7D7F23251D9B3F0029F9EB /* TrailerViewController.swift in Sources */,
+				CD7D7F1D251D6BB90029F9EB /* MovieDetailsViewController.swift in Sources */,
+				CD7D7F21251D7C340029F9EB /* GridViewCell.swift in Sources */,
+				CD7D7EE5251D312D0029F9EB /* AppDelegate.swift in Sources */,
+				CD7D7F1F251D758C0029F9EB /* GridViewController.swift in Sources */,
+				CD7D7EE7251D312D0029F9EB /* SceneDelegate.swift in Sources */,
+				CD7D7F19251D3D1E0029F9EB /* MovieCell.swift in Sources */,
+				CD7D7F17251D32FA0029F9EB /* MoviesViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD7D7EF3251D31310029F9EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD7D7EFC251D31310029F9EB /* fixsterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD7D7EFE251D31310029F9EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD7D7F07251D31310029F9EB /* fixsterUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD7D7EF9251D31310029F9EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD7D7EE0251D312D0029F9EB /* fixster */;
+			targetProxy = CD7D7EF8251D31310029F9EB /* PBXContainerItemProxy */;
+		};
+		CD7D7F04251D31310029F9EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD7D7EE0251D312D0029F9EB /* fixster */;
+			targetProxy = CD7D7F03251D31310029F9EB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CD7D7EEA251D312D0029F9EB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD7D7EEB251D312D0029F9EB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CD7D7EEF251D31310029F9EB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD7D7EF0251D31310029F9EB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CD7D7F09251D31310029F9EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CD7D7F0A251D31310029F9EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CD7D7F0C251D31320029F9EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60D70264E4042FA8E6217ECA /* Pods-fixster.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = fixster/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.codepath.fixster;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CD7D7F0D251D31320029F9EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2864B97452E6603D27D1ECA3 /* Pods-fixster.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = fixster/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.codepath.fixster;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CD7D7F0F251D31320029F9EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E140A4D09134F314E141B017 /* Pods-fixsterTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = fixsterTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Codepath.fixsterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fixster.app/fixster";
+			};
+			name = Debug;
+		};
+		CD7D7F10251D31320029F9EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E35CADA0019366DB5DFD3E4A /* Pods-fixsterTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = fixsterTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Codepath.fixsterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fixster.app/fixster";
+			};
+			name = Release;
+		};
+		CD7D7F12251D31320029F9EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34E8591E59A37965E9C7B3D0 /* Pods-fixster-fixsterUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = fixsterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Codepath.fixsterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = fixster;
+			};
+			name = Debug;
+		};
+		CD7D7F13251D31320029F9EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82503EC40DDB88D50EE4CD19 /* Pods-fixster-fixsterUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = fixsterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Codepath.fixsterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = fixster;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD7D7EDC251D312D0029F9EB /* Build configuration list for PBXProject "fixster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD7D7F09251D31310029F9EB /* Debug */,
+				CD7D7F0A251D31310029F9EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD7D7F0B251D31320029F9EB /* Build configuration list for PBXNativeTarget "fixster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD7D7F0C251D31320029F9EB /* Debug */,
+				CD7D7F0D251D31320029F9EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD7D7F0E251D31320029F9EB /* Build configuration list for PBXNativeTarget "fixsterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD7D7F0F251D31320029F9EB /* Debug */,
+				CD7D7F10251D31320029F9EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD7D7F11251D31320029F9EB /* Build configuration list for PBXNativeTarget "fixsterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD7D7F12251D31320029F9EB /* Debug */,
+				CD7D7F13251D31320029F9EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CD7D7ED9251D312D0029F9EB /* Project object */;
+}

@@ -1,0 +1,46 @@
+# Flix
+
+Flix is an app that allows users to browse movies from the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
+---
+
+## Flix Part 1
+
+### User Stories
+
+#### REQUIRED (10pts)
+- [ x ] (2pts) User sees an app icon on the home screen and a styled launch screen.
+- [ x ] (5pts) User can view and scroll through a list of movies now playing in theaters.
+- [ x ] (3pts) User can view the movie poster image for each movie.
+
+#### BONUS
+- [ x ] (2pt) User can view the app on various device sizes and orientations.
+- [ x ] (1pt) Run your app on a real device.
+
+### App Walkthrough GIF
+
+<img src="demo.gif" width=250><br>
+
+### Notes
+- No Problems.
+
+## Flix Part 2
+
+### User Stories
+
+#### REQUIRED (10pts)
+- [ x ] (5pts) User can tap a cell to see more details about a particular movie.
+- [ x ] (5pts) User can tap a tab bar button to view a grid layout of Movie Posters using a CollectionView.
+
+#### BONUS
+- [ x ] (2pts) User can tap a poster in the collection view to see a detail screen of that movie.
+- [ x ] (2pts) In the detail view, when the user taps the poster, a new screen is presented modally where they can view the trailer.
+
+### App Walkthrough GIF
+
+<img src="demo.gif" width=250><br>
+
+### Notes
+- No key in the retrieved results: some videos do not the "key" when I try to retrieve it for the YouTube link. Since it's optional. When I define the video_info to collected the returned JSON as var video_info: [String:Any]!. It shows "Understanding The Unexpectedly found nil while unwrapping an Optional value" Since I’ve force-unwrapped an optional "key" with !. Try to use ? rather than !.
+-  Although the posterView I attached the gesture to has User Interaction Enabled in the storyboard's property. It seems not work since the tap gesture has no reactions. I solve it by programming as "posterImage.isUserInteractionEnabled = true"
+
+- When adjust the cell size of the CollectionView, it dosen't work with a fixed cell size. I solve it by setting the estimated size of UICollectionViewCell with None or make the class conform to uicollectionviewdelegateflowlayout and add the “sizeforitem” function to return the size you want there. (from Slack)

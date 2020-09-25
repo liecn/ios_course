@@ -61,7 +61,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="billAmountTextField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="MDL-hd-Hae"/>
                                     <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="editingChanged" id="hPF-4B-WKp"/>
                                 </connections>
                             </textField>
