@@ -17,6 +17,7 @@ class HomeTableViewController: UITableViewController {
     
     
     @objc func loadTweets(){
+        print("loadTweets")
         numberOfTweet=20
         let myUrl="https://api.twitter.com/1.1/statuses/home_timeline.json"
         let myParam=["count":numberOfTweet]
@@ -44,10 +45,7 @@ class HomeTableViewController: UITableViewController {
                for tweet in tweets{
                    self.tweetArray.append(tweet)
                }
-               
                self.tableView.reloadData()
-            
-               
            }, failure: { (Error) in
                print("Could not retreive tweets! oh no!")
            })
@@ -69,6 +67,8 @@ class HomeTableViewController: UITableViewController {
         
         let user=tweetArray[indexPath.row]["user"] as! NSDictionary
         
+//        cell.timeLabel.text= getRelativeTime(timeString: (tweetArray[indexPath.row]["created_at"] as? String))
+        
         cell.userNameLabel.text=user["name"] as? String
         cell.tweetContent.text=tweetArray[indexPath.row]["text"] as? String
         let imageUrl=URL(string: (user["profile_image_url_https"] as? String)!)
@@ -76,22 +76,35 @@ class HomeTableViewController: UITableViewController {
         if let imageData=data{
             cell.profileImageView.image=UIImage(data:imageData)
         }
+        cell.setFav(tweetArray[indexPath.row]["favorited"] as! Bool)
+        
+        cell.tweetId=tweetArray[indexPath.row]["id"] as! Int
+//        cell.retweeted=tweetArray[indexPath.row]["retweeted"] as! Bool
+        cell.setRetweeted(tweetArray[indexPath.row]["retweeted"] as! Bool)
         return cell
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadTweets()
-        
+
+        print("viewDidLoad")
         myRefreshControl.addTarget(self, action: #selector(loadTweets), for: .valueChanged)
         
         tableView.refreshControl=myRefreshControl
+        
+        tableView.rowHeight=UITableView.automaticDimension
+        tableView.estimatedRowHeight=150
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("viewDidAppear")
+        self.loadTweets()
+    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
