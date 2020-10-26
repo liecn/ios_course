@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "12FA14FF-2576-427D-B032-8569DB658F68"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "42DA1D85-E1FF-4F6E-A969-A1D5620DE689"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Parstagram/CameraViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "CameraViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "42DA1D85-E1FF-4F6E-A969-A1D5620DE689 - 9b9290c274b22d17"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Parstagram.CameraViewController.imageView.getter : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "Parstagram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chenningli/Desktop/Projects/ios_course/Parstagram/Parstagram/CameraViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "42DA1D85-E1FF-4F6E-A969-A1D5620DE689 - d2a3931e9d4df923"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Parstagram.CameraViewController.imageView.setter : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "Parstagram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chenningli/Desktop/Projects/ios_course/Parstagram/Parstagram/CameraViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "155">
+               </Location>
+               <Location
+                  uuid = "42DA1D85-E1FF-4F6E-A969-A1D5620DE689 - dfae6f228f73b214"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Parstagram.CameraViewController.imageView.modify : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "Parstagram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chenningli/Desktop/Projects/ios_course/Parstagram/Parstagram/CameraViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "65">
+               </Location>
+               <Location
+                  uuid = "42DA1D85-E1FF-4F6E-A969-A1D5620DE689 - ff68eeea1a537e4a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Parstagram.CameraViewController.imageView.modify : Swift.Optional&lt;__C.UIImageView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Parstagram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chenningli/Desktop/Projects/ios_course/Parstagram/Parstagram/CameraViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "42DA1D85-E1FF-4F6E-A969-A1D5620DE689 - a79ed419a58bff0e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Parstagram.CameraViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Parstagram.CameraViewController"
+                  moduleName = "Parstagram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chenningli/Desktop/Projects/ios_course/Parstagram/Parstagram/CameraViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "181">
+               </Location>
+               <Location
+                  uuid = "42DA1D85-E1FF-4F6E-A969-A1D5620DE689 - e1cb044fa5b99a05"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Parstagram.CameraViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Parstagram.CameraViewController&gt;"
+                  moduleName = "Parstagram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chenningli/Desktop/Projects/ios_course/Parstagram/Parstagram/CameraViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "119">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
