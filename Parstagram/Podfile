@@ -14,6 +14,7 @@ target 'Parstagram' do
 #  pod 'OAuthSwift'
 #  pod 'OAuthSwiftAlamofire'
   pod 'Parse'
+  pod 'MessageInputBar'
   target 'ParstagramTests' do
     inherit! :search_paths
     # Pods for testing
