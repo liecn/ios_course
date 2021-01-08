@@ -1,0 +1,77 @@
+PODS:
+  - Alamofire (5.4.0)
+  - AlamofireImage (4.1.0):
+    - Alamofire (~> 5.1)
+  - Bolts/Tasks (1.9.1)
+  - CardParts (3.2.0):
+    - RxCocoa (~> 5.0)
+    - RxDataSources (~> 4.0)
+    - RxGesture (~> 3.0)
+    - RxSwift (~> 5.0)
+  - Differentiator (4.0.1)
+  - Parse (1.19.1):
+    - Parse/Core (= 1.19.1)
+  - Parse/Core (1.19.1):
+    - Bolts/Tasks (= 1.9.1)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxDataSources (4.0.1):
+    - Differentiator (~> 4.0)
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxGesture (3.0.2):
+    - RxCocoa (~> 5.1)
+    - RxSwift (~> 5.1)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
+  - TKSubmitTransition (3.1.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireImage (~> 4.1)
+  - CardParts
+  - Parse
+  - TKSubmitTransition (from `https://github.com/entotsu/TKSubmitTransition.git`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AlamofireImage
+    - Bolts
+    - CardParts
+    - Differentiator
+    - Parse
+    - RxCocoa
+    - RxDataSources
+    - RxGesture
+    - RxRelay
+    - RxSwift
+
+EXTERNAL SOURCES:
+  TKSubmitTransition:
+    :git: https://github.com/entotsu/TKSubmitTransition.git
+
+CHECKOUT OPTIONS:
+  TKSubmitTransition:
+    :commit: 1960d8e644c2dd3aa4585b6ed562f90ec8e13065
+    :git: https://github.com/entotsu/TKSubmitTransition.git
+
+SPEC CHECKSUMS:
+  Alamofire: 3b6a534a3df22db367e4dedeeca73d1ddfcf0e2f
+  AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
+  Bolts: 8c1e8aab2f603387b8b9924f57d1d64f43d3ffdc
+  CardParts: ba1655367d4fa053e45d5ec932ee298f70f9464d
+  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  Parse: e40fdb9c7d665823b7fe9865949cac9a53eb2ce7
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
+  RxGesture: d6bd7447ca3a596c7a9702a6a2b6a2bb5d8bae54
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  TKSubmitTransition: 644b99291e301a03227fdb9f5709d81e09f6ad18
+
+PODFILE CHECKSUM: c8e1053bcf8b535d97cef288a01ef4080ef14bfb
+
+COCOAPODS: 1.10.0

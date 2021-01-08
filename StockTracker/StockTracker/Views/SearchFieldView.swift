@@ -1,0 +1,306 @@
+//
+//  SearchView.swift
+//  StockTracker
+//
+//  Created by Chenning Li on 12/8/20.
+//  Copyright © 2020 Chenning Li. All rights reserved.
+//
+
+import UIKit
+import SwiftUI
+import Combine
+
+
+class CustomCell: UITableViewCell {
+    
+    lazy var symbolLabel: UILabel = {
+        let label = UILabel()
+        label.font = .boldSystemFont(ofSize: 16)
+        //label.backgroundColor = .blue
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    lazy var nameLabel: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 14)
+        label.numberOfLines = 2
+        //label.backgroundColor = .red
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    lazy var exchangeLabel: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 14)
+        //label.backgroundColor = .green
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        self.contentView.addSubview(symbolLabel)
+        NSLayoutConstraint.activate([
+            
+            symbolLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
+            symbolLabel.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.25),
+            symbolLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+        ])
+        
+        self.contentView.addSubview(nameLabel)
+        NSLayoutConstraint.activate([
+            nameLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            nameLabel.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.4),
+            nameLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+        ])
+        
+        self.contentView.addSubview(exchangeLabel)
+        NSLayoutConstraint.activate([
+            exchangeLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            exchangeLabel.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.15),
+            exchangeLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+        ])
+        
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+}
+
+
+
+class SearchViewController: UIViewController {
+   
+    @ObservedObject var mainViewController: MainViewController
+    
+    @Binding var detailIsActive: Bool
+    @Binding var isSearchMode: Bool
+    
+    var subscription: AnyCancellable?
+    var forSomeReasonSubscription: AnyCancellable?
+    var subject = PassthroughSubject<String, WebWrapperError>()
+    
+    var searchedResults: [StockAttributes] = [] {
+        didSet {
+            UIView.transition(with: self.tableView, duration: 0.2, options: .transitionCrossDissolve, animations: {self.tableView.reloadData()}, completion: nil)
+        }
+    }
+    
+    lazy var tableView: UITableView = {
+        let tableView = UITableView(frame: CGRect.zero, style: UITableView.Style.grouped)
+        tableView.contentInset = UIEdgeInsets(top: -20, left: 0, bottom: 100, right: 0)
+        tableView.rowHeight = 40
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        return tableView
+    }()
+    
+    lazy var searchBar: UISearchBar = {
+        let searchBar = UISearchBar(frame: .zero)
+        searchBar.placeholder = "Search"
+        searchBar.searchBarStyle = .minimal
+        searchBar.autocapitalizationType = .none
+        
+        searchBar.translatesAutoresizingMaskIntoConstraints = false
+        return searchBar
+    }()
+    
+    lazy var cancelButton: UIButton = {
+        var button = UIButton()
+        button.setTitle("Cancel", for: UIControl.State.normal)
+        button.setTitleColor(UIColor.systemBlue, for: UIControl.State.normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(cancel), for: UIControl.Event.touchUpInside)
+        return button
+    }()
+    
+    @objc func cancel() {
+        mainViewController.chartViewControllers.forEach{ viewModel in
+            viewModel.start()
+        }
+        self.dismiss(animated: true) {}
+    }
+
+    init(mainViewController: ObservedObject<MainViewController>, detailIsActive: Binding<Bool>, isSearchMode: Binding<Bool>) {
+        _mainViewController = mainViewController
+        _detailIsActive = detailIsActive
+        _isSearchMode = isSearchMode
+
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        searchBar.delegate = self
+        setupUI()
+   
+        self.tableView.reloadData()
+        tableView.register(CustomCell.self, forCellReuseIdentifier: "SearchCell")
+        setSubscription()
+
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        //if searchBar.window != nil, !searchBar.isFirstResponder {
+            searchBar.becomeFirstResponder()
+        //}
+
+    }
+    
+    func setupUI() {
+        
+        self.view.addSubview(searchBar)
+        NSLayoutConstraint.activate([
+            searchBar.topAnchor.constraint(equalTo: view.topAnchor, constant: 10),
+            searchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            searchBar.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.7)])
+        
+        self.view.addSubview(cancelButton)
+        NSLayoutConstraint.activate([
+            cancelButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 20),
+            cancelButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15)])
+        
+        self.view.addSubview(tableView)
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 70),
+            tableView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1),
+            tableView.heightAnchor.constraint(equalTo: view.heightAnchor, constant: 0)])
+
+    }
+    
+    func setSubscription() {
+        subscription =
+            subject
+                .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
+                .flatMap { string -> Publishers.ReceiveOn<AnyPublisher<Search, WebWrapperError>, DispatchQueue> in
+                    let url = WebWrapper.makeSearchURL(index: string)
+                    return WebWrapper.makeNetworkQuery(for: url, decodableType: Search.self).receive(on: DispatchQueue.main)
+            }
+            .sink(receiveCompletion: {_ in }) { search in
+                
+                guard let searchedResults = search.data?.items else {
+                    self.searchedResults = []
+                    return
+                }
+                self.searchedResults = searchedResults
+                
+        }
+        /*
+        forSomeReasonSubscription =
+            subject
+                .debounce(for: .seconds(0.7), scheduler: DispatchQueue.main)x
+                .flatMap { string -> Publishers.ReceiveOn<AnyPublisher<Fundamental, WebServiceError>, DispatchQueue> in
+                    let url = WebService.makeFundamentaltURL(symbol: string, date: Int(Date().timeIntervalSince1970))
+                    return WebService.makeNetworkQuery(for: url, decodableType: Fundamental.self).receive(on: DispatchQueue.main)
+            }
+            .sink(receiveCompletion: {_ in }) { fundamental in
+                guard let resultQuote = fundamental.optionChain?.result?.first?.quote else {return}
+                self.searchedResults.insert(StockAttributes(symbol: resultQuote.symbol ?? "", name: resultQuote.shortName ?? "", exch: resultQuote.exchange ?? "", type: resultQuote.quoteType ?? "", exchDisp: resultQuote.exchange ?? "", typeDisp: resultQuote.quoteType ?? ""), at: 0)
+        }*/
+    }
+    
+    
+}
+
+
+// MARK: - UITableViewDelegate
+extension SearchViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailController = DetailChartViewController(withSymbol: searchedResults[indexPath.row].symbol, connectionCheck: self.mainViewController.connectionCheck)
+        self.mainViewController.detailViewController = detailController
+        self.detailIsActive = true
+        self.isSearchMode = false
+        
+        UINavigationBar.setAnimationsEnabled(false)
+
+        dismiss(animated: true) {
+            UINavigationBar.setAnimationsEnabled(true)
+        }
+        
+    }
+    
+}
+
+
+// MARK: - UITableViewDataSource
+extension SearchViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.searchedResults.count
+
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell", for: indexPath) as! CustomCell
+        cell.symbolLabel.text = self.searchedResults[indexPath.row].symbol
+        cell.nameLabel.text = self.searchedResults[indexPath.row].name
+        cell.exchangeLabel.text = self.searchedResults[indexPath.row].exch
+        
+        return cell
+        
+    }
+    
+}
+
+
+
+
+extension SearchViewController: UISearchBarDelegate {
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        setSubscription()
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        //text = searchText
+        
+        if searchText.count > 1 {
+            subject.send(searchText)
+        } else {
+            searchedResults = []
+        }
+    }
+    
+    
+}
+
+
+// MARK: - REPRESENTABLE
+struct SearchFieldView: UIViewControllerRepresentable {
+    
+    //@Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
+    @ObservedObject var mainViewController: MainViewController
+    @Binding var detailIsActive: Bool
+    @Binding var isSearchMode: Bool
+    
+    func makeUIViewController(context: Context) -> SearchViewController {
+        
+        return SearchViewController(mainViewController: _mainViewController, detailIsActive: _detailIsActive, isSearchMode: _isSearchMode)
+    }
+    
+    func updateUIViewController(_ contentViewController: SearchViewController, context: Context) {
+        //debugPrint("updateUIViewController")
+    }
+
+}
+
+struct SearchFieldView_Previews: PreviewProvider {
+    static var previews: some View {
+        SearchFieldView(mainViewController: MainViewController(from: "AAPL"), detailIsActive: .constant(false), isSearchMode: .constant(true))
+    }
+}
